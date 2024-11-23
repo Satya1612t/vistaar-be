@@ -15,6 +15,10 @@ mongoose.connect(process.env.MONGO_URI)
 app.use('/categories', CATEGORY_ROUTER);
 app.use('/products', PRODUCT_ROUTER);
 
+app.get('/', (req, res) => {
+    return res.send("Welcome to the Backend of Vistaar Ecommerce");
+})
+
 app.listen(process.env.PORT, () => {
     console.log(`Server are running at ${process.env.PORT}`);
 })
