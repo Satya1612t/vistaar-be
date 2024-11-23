@@ -59,7 +59,7 @@ PRODUCT_ROUTER.get('/', async (req, res) => {
         }
 
         const filterProductByCategory = products.map((item) => {
-            const category = categories.find((c) => c._id.toString() === item.categoryId.toString());
+            const category = categories.find((c) => c._id === item.categoryId?.toString());
             return {
                     ...item,
                     categoryName: category ? category.name : "uncategorized",
