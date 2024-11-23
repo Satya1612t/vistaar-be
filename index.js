@@ -12,8 +12,8 @@ mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('Mongo Connected'))
     .catch((error) => console.log(error))
 
-app.use('/api/v1/categories', CATEGORY_ROUTER);
-app.use('/api/v1/products', PRODUCT_ROUTER);
+app.use('/categories', CATEGORY_ROUTER);
+app.use('/products', PRODUCT_ROUTER);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server are running at ${process.env.PORT}`);
