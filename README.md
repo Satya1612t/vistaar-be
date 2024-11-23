@@ -1,4 +1,4 @@
-# Project Name
+# Vistaar - BE
 Backend or Server of Ecommerce webapp which have CRUD operation relate to Products and Categories.
 
 # Follow these steps to run this server succesufully.
