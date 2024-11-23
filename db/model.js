@@ -5,7 +5,6 @@ const categorySchema = new mongoose.Schema({
         type: String,
         unique: true,
         required: true,
-        lowercase: true,
         trim: true
     },
     description: {
@@ -19,7 +18,6 @@ const productSchema = new mongoose.Schema({
         type: String,
         unique: true,
         required: true,
-        lowercase: true,
         trim: true
     },
     price: {
@@ -29,6 +27,7 @@ const productSchema = new mongoose.Schema({
     },
     stock: {
         type: Number,
+        required: true,
         default: 0,
     },
     categoryId: {

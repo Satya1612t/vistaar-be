@@ -67,7 +67,7 @@ PRODUCT_ROUTER.get('/', async (req, res) => {
         })
 
         return res.status(200).json({
-            "Total Products": products.length,
+            "totalProducts": products.length,
             filterProductByCategory
         });
 
@@ -144,12 +144,12 @@ PRODUCT_ROUTER.delete('/delete/:id', async (req, res) => {
     }
 
     try {
-        const deleted_product = await Product.findByIdAndDelete(id);
-        if (!deleted_product) {
+        const deletedProduct = await Product.findByIdAndDelete(id);
+        if (!deletedProduct) {
             return res.status(400).json({ error: 'something-went wrong' })
         }
 
-        return res.status(200).json({ message: 'Product deleted successfully', deleted_product })
+        return res.status(200).json({ message: 'Product deleted successfully', deletedProduct })
 
     } catch (error) {
         console.log(error);
