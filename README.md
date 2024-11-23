@@ -27,18 +27,18 @@ Run command to start server:
 ## 5. Test the Following API using Postman or Browser
   - Sample URL: http://localhost:3000
   - Endpoints:
-      GET / ----> This return Welcome Message as response.
+      - GET / ----> This return Welcome Message as response.
   - Products:
-      POST /products/create
-      GET /products/
-      GET /products/:id
-      PATCH /products/update/:id
-      DELETE /products/delete/:id
+      - POST /products/create
+      - GET /products/
+      - GET /products/:id
+      - PATCH /products/update/:id
+      - DELETE /products/delete/:id
   - Categories:
-      POST /categories/create
-      GET /categories/
-      GET /categories/:id
-      PUT /categories/update/:id
-      DELETE /categories/delete/:id
+      - POST /categories/create
+      - GET /categories/
+      - GET /categories/:id
+      - PUT /categories/update/:id
+      - DELETE /categories/delete/:id
 
 ### Feel free to use this repository if find useful.
