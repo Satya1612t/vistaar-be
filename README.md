@@ -1,7 +1,11 @@
 # Vistaar - BE
 Backend or Server of Ecommerce webapp which have CRUD operation relate to Products and Categories.
 
-# Follow these steps to run this server succesufully.
+# Features
+Create, Read, Update, and Delete (CRUD) operations for both products and categories.
+Products are associated with categories via a categoryId reference.
+Validation and error handling for data integrity.
+Organized API structure and documentation for endpoints
 
 ## 1. Clone the Repository
 Clone this repository using the following command: git clone https://github.com/Satya1612t/vistaar-be.git
@@ -40,5 +44,31 @@ Run command to start server:
       - GET /categories/:id
       - PUT /categories/update/:id
       - DELETE /categories/delete/:id
+
+# Schema Design and Relationships
+## Category Schema
+The Category schema defines the structure for product categories. Each category contains:
+
+ - name: A unique and required string field to identify the category.
+ - description: An optional field to describe the category.
+ - timestamps: Automatically includes createdAt and updatedAt fields.
+
+
+## Product Schema
+The Product schema defines the structure for products. Each product contains:
+
+ - name: A unique and required string field to identify the product.
+ - price: A required number field with a minimum value of 0.
+ - stock: A required field that defaults to 0, representing the available quantity.
+ - categoryId: A required field referencing the Category model, establishing a relationship between products and categories.
+ - timestamps: Automatically includes createdAt and updatedAt fields.
+
+## Relationship
+ - One-to-Many Relationship:
+A single category can be associated with multiple products.
+This relationship is maintained by storing the categoryId reference in the Product schema.
+
+## Diagram Representation
+ - Category (1) ---> (∞) Product
 
 ### Feel free to use this repository if find useful.
