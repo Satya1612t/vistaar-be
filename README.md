@@ -27,6 +27,8 @@ Create a .env file at the same level as your index.js file and add the following
 ## 4. Start the server (npm start or yarn start)
 Run command to start server:
   - npm start
+Run command to test server:
+  - npm test
 
 ## 5. Test the Following API using Postman or Browser
   - Sample URL: http://localhost:3000
